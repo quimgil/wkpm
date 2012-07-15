@@ -6,13 +6,20 @@
 <head>
   <meta charset="utf-8">
 
-  <title></title>
+  <title>wkpm</title>
   <meta name="description" content="">
 
   <!-- Mobile viewport optimization h5bp.com/ad -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width">
+  
+  <!-- From JQuery Mobile template -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
   <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
   <!-- For iPhone 4 with high-resolution Retina display: -->
@@ -44,78 +51,23 @@
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
 
 <style>
-body {
-	margin:0;
-	padding:20px 40px;
-	background:#fff;
-	font:80% Arial, Helvetica, sans-serif;
-	color:#555;
-	line-height:180%;
-}
-h1{
-	font-size:180%;
-	font-weight:normal;
-	}
-h2{
-	font-size:160%;
-	font-weight:normal;
-	}	
-h3{
-	font-size:140%;
-	font-weight:normal;
-	}	
-pre{
-	display:block;
-	font:12px "Courier New", Courier, monospace;
-	padding:10px;
-	border:1px solid #bae2f0;
-	background:#e3f4f9;	
-	margin:.5em 0;
-	width:500px;
-	}		
-.clear{
-	clear:both;
-	}	
-img{border:none;}
-	
-/* Character Count styles */	
-
-form{width:500px;}
-label{
-	display:block;
-	font-size:14px;
-	}
-textarea{
-	width:490px;
-	height:60px;
-	border:2px solid #ccc;
-	padding:3px;
-	color:#555;
-	font:16px Arial, Helvetica, sans-serif;
-	}
-form div{position:relative;margin:1em 0;}
-form .counter{
-	position:absolute;
-	right:0;
-	top:0;
-	font-size:20px;
-	font-weight:bold;
-	color:#ccc;
-	}
 form .warning{color:#600;}	
 form .exceeded{color:#e00;}	
-
 </style>
 
 </head>
 
 <body>
 
-  <div id="container">
+<div data-role="page">
+
+  <div id="container" data-role="header"> 
     <header>
 
     </header>
-    <div id="main" role="main">
+  </div>
+
+  <div id="main" data-role="content">
 
 <!-- http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas/ -->
 
@@ -139,10 +91,6 @@ form .exceeded{color:#e00;}
 
 
   <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/helper.js"></script>
