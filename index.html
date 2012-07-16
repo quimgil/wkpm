@@ -73,11 +73,11 @@ form .exceeded{color:#e00;}
 
 	<h1></h1>    
    
-    <form id="form" method="post" action="">  
+    <form id="form" action="index.html" method="post" onsubmit="save_data()">  
 
         <div>
-        	<label for="message">Write a little poem</label>
-        	<textarea id="message1" name="message1"></textarea>
+        	<label for="message1">Write a little poem</label>
+        	<textarea id="message1" name="message1" /></textarea>
         	<input type="submit" value="Submit" />
         </div>
 
@@ -110,6 +110,12 @@ form .exceeded{color:#e00;}
 			counterText: 'Characters left: '	
 		});
 	});
+</script>
+<script type="text/javascript">
+        function save_data() {
+                var input = document.getElementById("message1");
+                localStorage.setItem("poem" + localStorage.length, input.value);  
+                };
 </script>
 
   <!-- Debugger - remove for production -->
