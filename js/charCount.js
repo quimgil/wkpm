@@ -40,8 +40,12 @@
 			}
 			if(available < 0){
 				$(obj).next().addClass(options.cssExceeded);
+				$('input[type="submit"]').attr('disabled','disabled');
+
 			} else {
 				$(obj).next().removeClass(options.cssExceeded);
+				$('input[type="submit"]').removeAttr('disabled');
+
 			}
 			$(obj).next().html(options.counterText + available);
 		};
