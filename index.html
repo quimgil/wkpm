@@ -62,21 +62,16 @@ form .exceeded{color:#e00;}
 <div data-role="page">
 
   <div id="container" data-role="header"> 
-    <header>
-
-    </header>
+ <h1>Write a little poem</h1>   
   </div>
 
   <div id="main" data-role="content">
 
-<!-- http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas/ -->
-
-	<h1></h1>    
+<!-- http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas/ --> 
    
     <form id="form" action="index.html" method="post" onsubmit="save_data()">  
 
         <div>
-        	<label for="message1">Write a little poem</label>
         	<textarea id="message1" name="message1" /></textarea>
         	<input type="submit" value="Submit" />
         </div>
@@ -85,7 +80,12 @@ form .exceeded{color:#e00;}
 
     </div>
 
-    <footer>
+        <div data-role="footer" data-position="fixed" data-id="footer" class="ui-grid-b"> 
+                <div class="ui-block-a"><a href="index.html#home" data-role="button" data-icon="home" data-mini="false" data-iconpos="bottom" data-inline="false">Post</a></div>
+                <div class="ui-block-b"><a href="index.html#poems" data-role="button" data-icon="grid" data-mini="false" data-iconpos="bottom" data-inline="false">Poems</a></div>
+	        <div class="ui-block-c"><a href="index.html#devel" data-role="button" data-icon="alert" data-mini="false" data-iconpos="bottom" data-inline="false">Devel</a></div>
+        </div>
+        </div>
 
     </footer>
   </div> <!--! end of #container -->
